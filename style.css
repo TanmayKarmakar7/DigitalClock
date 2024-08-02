@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@font-face {
+    font-family: digital;
+    src: url(Fonts/Digital\ Dismay.otf);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+body{
+    height: 100vh;
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    padding: 35px;
+    border-radius: 12px;
+    background: #3b3b45;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.container::after{
+    content: "";
+    width: calc(100% + 10px);
+    height: calc(100% + 10px);
+    background: linear-gradient(45deg, #fb0094, #0000ff, #00ff00, #ffff00, #ff0000, #fb0094, #0000ff, #00ff00, #ffff00, #ff0000);
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    background-size: 400%;
+    z-index: -1;
+    border-radius: 12px;
+    animation: animate-shadow 10s linear infinite alternate;
+}
+@keyframes animate-shadow{
+    0%{
+        background-position: 0 0;
+    }
+    50%{
+        background-position: 100% 0;
+    }
+    100%{
+        background-position: 0 0;
+    }
+}
+.box{
+    background: #1e1e21;
+    height: 80%;
+    border-radius: 15px;
+}
+.days{
+    padding:30px 5px 1px 5px;
+    width: 100%;
+}
+.days ul{
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+    gap: 10px;
+}
+.days ul li{
+    font-size: 18px;
+    color: #b3b3b5;
+}
+.time{
+    width: 100%;
+    padding: 25px 80px 25px 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.time h1{
+    font-size: 120px;
+    font-family: digital;
+    font-weight: 400;
+    color: #e9e9ef;
+}
+.time p{
+    font-size: 20px;
+    color: #bfbfc1;
+    margin-left: 30px;
+}
+
+
+@media (width < 780px){
+    .days ul{
+        max-width: 80%;
+        margin: auto;
+    }
+    .days ul li{
+        font-size: 14px;
+    }
+    .time h1{
+        font-size: 60px;
+    }
+    .time p{
+        font-size: 16px;
+    }
+}
+@media (width < 560px){
+    .container{
+        max-width: 90%;
+        padding: 15px 0;
+    }
+    .box{
+        max-width: 90%;
+    }
+    .days ul li{
+        font-size: 12px;
+    }
+    .time h1{
+        font-size: 50px;
+    }
+    .time p{
+        font-size: 14px;
+        margin-left: 20px;
+    }
+    .days{
+        padding:30px 0px 0px 0px;
+    }
+}
