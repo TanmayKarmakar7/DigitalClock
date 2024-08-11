@@ -20,9 +20,11 @@ function digitalClock(){
     document.querySelector("#minutes").innerHTML = minutes;
     document.querySelector("#seconds").innerHTML = seconds;
 
+    day = (day === 0) ? 7 : day;
+
     let todayDay = document.querySelector(`ul :nth-child(${day})`);
     todayDay.style.color = "#d13127";
     todayDay.style.fontWeight = "600";
 };
 
-setInterval(digitalClock, 1000);
+setInterval(digitalClock(), 1000);
