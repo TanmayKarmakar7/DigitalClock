@@ -27,4 +27,4 @@ function digitalClock(){
     todayDay.style.fontWeight = "600";
 };
 
-setInterval(digitalClock(), 1000);
+setInterval(digitalClock, 1000);
